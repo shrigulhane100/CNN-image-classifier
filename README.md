@@ -56,7 +56,15 @@ In PyTorch, the neural network package contains various loss functions that form
 
 To train the model, you have to loop over our data iterator, feed the inputs to the network, and optimize. PyTorch doesn’t have a dedicated library for GPU use, but you can manually define the execution device. The device will be an Nvidia GPU if exists on your machine, or your CPU if it does not.
 
+# GPU
 
+• As the network makes use of a sophisticated deep convolutional neural network the training process is impossible to be done by a common laptop. In order to train your models to your local machine you have three options
+
+    Cuda -- If you have an NVIDIA GPU then you can install CUDA from here. With Cuda you will be able to train your model however the process will still be time consuming
+    Cloud Services -- There are many paid cloud services that let you train your models like AWS or Google Cloud
+    Coogle Colab -- Google Colab gives you free access to a tesla K80 GPU for 12 hours at a time. Once 12 hours have ellapsed you can just reload and continue! The only limitation is that you have to upload the data to Google Drive and if the dataset is massive you may run out of space.
+
+However, once a model is trained then a normal CPU can be used for the predict.py file and you will have an answer within some seconds.
 
 
 ## Run
