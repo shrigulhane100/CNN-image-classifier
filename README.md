@@ -21,10 +21,10 @@ Here, you'll build a basic convolution neural network (CNN) to classify the imag
 A CNN is a class of neural networks, defined as multilayered neural networks designed to detect complex features in data. They're most commonly used in computer vision applications.
 
 # Our network will be structured with the following 14 layers:
-'''
+```
 Conv -> BatchNorm -> ReLU -> Conv -> BatchNorm -> ReLU -> MaxPool -> Conv -> BatchNorm -> ReLU -> Conv -> BatchNorm -> ReLU -> Linear.
 The convolution layer
-'''
+```
 
 The convolution layer is a main layer of CNN which helps us to detect features in images. Each of the layers has number of channels to detect specific features in images, and a number of kernels to define the size of the detected feature. Therefore, a convolution layer with 64 channels and kernel size of 3 x 3 would detect 64 distinct features, each of size 3 x 3. When you define a convolution layer, you provide the number of in-channels, the number of out-channels, and the kernel size. The number of out-channels in the layer serves as the number of in-channels to the next layer.
 
@@ -33,10 +33,10 @@ Other layers
 
 # The following other layers are involved in our network:
 
-*    The ReLU layer is an activation function to define all incoming features to be 0 or greater. When you apply this layer, any number less than 0 is changed to zero, while others are kept the same.
-*   the BatchNorm2d layer applies normalization on the inputs to have zero mean and unit variance and increase the network accuracy.
-*  The MaxPool layer will help us to ensure that the location of an object in an image will not affect the ability of the neural network to detect its specific features.
-*    The Linear layer is final layers in our network, which computes the scores of each of the classes. In the CIFAR10 dataset, there are ten classes of labels. The label with the highest score will be the one model predicts. In the linear layer, you have to specify the number of input features and the number of output features which should correspond to the number of classes.
++    The ReLU layer is an activation function to define all incoming features to be 0 or greater. When you apply this layer, any number less than 0 is changed to zero, while others are kept the same.
++   the BatchNorm2d layer applies normalization on the inputs to have zero mean and unit variance and increase the network accuracy.
++  The MaxPool layer will help us to ensure that the location of an object in an image will not affect the ability of the neural network to detect its specific features.
++    The Linear layer is final layers in our network, which computes the scores of each of the classes. In the CIFAR10 dataset, there are ten classes of labels. The label with the highest score will be the one model predicts. In the linear layer, you have to specify the number of input features and the number of output features which should correspond to the number of classes.
 
 # How does a Neural Network work?
 
